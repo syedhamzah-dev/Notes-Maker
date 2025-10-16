@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Notes Maker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Notes Maker</h1>
+      <p class="muted">Quickly add notes — saved in your browser.</p>
+    </header>
+
+    <section class="add-note">
+      <form id="noteForm">
+        <input id="noteTitle" type="text" placeholder="Title (optional)" maxlength="100" />
+        <textarea id="noteBody" placeholder="Write your note here..." rows="4" required></textarea>
+        <div class="actions">
+          <button type="submit" id="addBtn">Add Note</button>
+          <button type="button" id="clearAll">Clear All</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Your Notes</h2>
+      <ul id="notesList" class="notes-list" aria-live="polite"></ul>
+      <p id="emptyMessage" class="muted">No notes yet — add one above.</p>
+    </section>
+
+    <footer>
+      <small>Simple Notes Maker • stores notes locally in your browser</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
